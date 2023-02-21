@@ -1,4 +1,4 @@
-function normalizaParagrafo(idParagrafo) {
+function normalizaParagrafo() {
   let paragraphRaw =
     "       este é um exemplo da paragrafo vou          colocar uns espaços pra      testar, mas deu problema com a vírgulagit remote - v \n Eu queria entender como fica na quebra de linha então do tentando fazer aqui também";
 //remoção de espaços
