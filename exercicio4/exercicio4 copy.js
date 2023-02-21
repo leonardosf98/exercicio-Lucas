@@ -5,7 +5,6 @@ function normalizaParagrafo() {
   let paragraphCut = paragraphRaw.split('\n');
   //remoção de espaços
   for (let i = 0; i < paragraphCut.length; i++) {
-
     let removedSpaces = paragraphCut[i].replace(/\s+/g, " ");
 
     let trimmedParagraph = removedSpaces.trim();
