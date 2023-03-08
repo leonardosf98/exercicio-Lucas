@@ -10,10 +10,14 @@ let matriz = [
 ];
 
 let valores = [];
-for (let R = 0; R <= 4; R++) {
-  for (let C = 0; C <= 3; C++) {
-    valores = +matriz[R][C];
+for (let i = 0; i <= 3; i++) {
+  for (let j = 0; j <= 2; j++) {
+    valores.push(matriz[i][j]);
   }
 }
-
-console.log(valores.sort());
+function sortfunction(a, b) {
+  return a - b;
+}
+valores.sort(function (a, b) {
+  return a < b;
+});
