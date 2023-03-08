@@ -1,0 +1,2 @@
+4. Crie uma função que normalize uma parágrafo, seguindo as seguintes regras:
+	4. Caso possua quebra de textos (`\n`) você deve repetir os passos anteriores para cada parágrafo
