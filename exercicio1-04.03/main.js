@@ -15,9 +15,10 @@ for (let i = 0; i <= 3; i++) {
     valores.push(matriz[i][j]);
   }
 }
+
 function sortfunction(a, b) {
-  return a - b;
+  return b - a;
 }
-valores.sort(function (a, b) {
-  return a < b;
-});
+valores.sort(sortfunction);
+
+console.log(valores);
