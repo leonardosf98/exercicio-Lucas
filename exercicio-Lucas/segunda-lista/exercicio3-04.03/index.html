@@ -7,20 +7,19 @@
     <title>Document</title>
   </head>
   <script type="text/javascript">
-    let matrizA = [1, 2, 3, 4, 5, 6, 7];
-    let matrizB = [8, 9, 10, 11, 12, 13, 14];
+    let matrizA = [52, 3, 92, 7, 9, 25, 10, 23, 30, 18];
+    let matrizB = [4, 7, 2, 12, 9, 6, 1, 59, 43, 21];
 
-    let matrizC = [[], [], [], [], [], [], []];
+    let matrizC = [];
 
     for (let i = 0; i < matrizA.length; i++) {
-      matrizC[i].push(matrizA[i]);
-      matrizC[i].push(matrizB[i]);
+      matrizC.push(matrizA[i] ** 2 + matrizB[i] ** 2);
     }
 
     console.log(matrizC.sort(ordena));
 
     function ordena(a, b) {
-      return a > b;
+      return a < b;
     }
   </script>
 

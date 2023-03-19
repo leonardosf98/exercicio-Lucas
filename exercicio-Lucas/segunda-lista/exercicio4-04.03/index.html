@@ -31,23 +31,26 @@
         if (array[mid] === value) {
           return value;
         }
-        if (array[mid] != value) {
+        if (array[mid] > value) {
           return pesquisaBinaria(array, left, mid - 1, value);
         }
-        if (array[mid] != value) {
+        if (array[mid] < value) {
           return pesquisaBinaria(array, mid + 1, right, value);
         }
         return -1;
       }
     }
+    let search;
+    let resultado;
 
-    let search = "jorge";
-    let resultado = pesquisaBinaria(list, 0, list.length - 1, search);
-
-    if (resultado) {
-      console.log(resultado);
-    } else {
-      console.log("Não encontrado");
+    for (let i = 0; i <= list.length - 1; i++) {
+      search = list[i];
+      resultado = pesquisaBinaria(list, 0, list.length - 1, search);
+      if (resultado) {
+        console.log(resultado);
+      } else {
+        console.log("Não encontrado");
+      }
     }
   </script>
 
