@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script type="text/javascript">
+  /*2. Elaborar um programa que leia oito elementos numéricos
+  inteiros em uma matriz A de uma dimensão do tipo vetor.
+  Construir uma matriz B de mesmos tipo e dimensão com os
+  elementos da matriz A multiplicados por 5. Montar uma
+  rotina de pesquisa binária para pesquisar os elementos
+  armazenados na matriz B*/
+
+  let matriz = [[1, 2, 3, 4], [5, 6, 7, 8]];
+  let matrizPrimeiraParte = [];
+  let matrizSegundaParte = [];
+  let matrizMultiplicada = [];
+
+  //Parte 1 Multiplicar Matriz
+
+  function multiplicaMatriz() {
+    matrizPrimeiraParte.push(matriz[0][0] * 5);
+    matrizPrimeiraParte.push(matriz[0][1] * 5);
+    matrizPrimeiraParte.push(matriz[0][2] * 5);
+    matrizPrimeiraParte.push(matriz[0][3] * 5);
+
+    matrizSegundaParte.push(matriz[1][0] * 5);
+    matrizSegundaParte.push(matriz[1][1] * 5);
+    matrizSegundaParte.push(matriz[1][2] * 5);
+    matrizSegundaParte.push(matriz[1][3] * 5);
+
+    matrizMultiplicada = [matrizPrimeiraParte, matrizSegundaParte];
+  }
+  multiplicaMatriz();
+
+  //Parte 2 Busca Binária
+  function pesquisaBinaria(array, left, right, value) {
+    if (right >= left) {
+      let mid = parseInt(left + (right - left) / 2);
+
+      if (array[mid] === value) {
+        return value;
+      }
+      if (array[mid] > value) {
+        return pesquisaBinaria(array, left, mid - 1, value);
+      }
+      if (array[mid] < value) {
+        return pesquisaBinaria(array, mid + 1, right, value);
+      } return -1;
+    }
+  }
+
+  let numero = 30;
+
+  for (let i = 0; i < matrizMultiplicada.length; i++) {
+    let resultado = pesquisaBinaria(matrizMultiplicada[i], 0, matrizMultiplicada[i].length - 1, numero)
+    if (resultado != -1 && resultado != undefined) {
+      console.log(resultado);
+    }
+  }
+  
+</script>
+
+<body>
+
+</body>
+
+</html>

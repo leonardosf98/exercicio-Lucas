@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script type="text/javascript">
+    let listRaw = [
+      "leo",
+      "lucas",
+      "matheus",
+      "leonardo",
+      "lys",
+      "alan",
+      "daniel",
+      "rafa",
+      "leticia",
+      "manoelgomes",
+    ];
+
+    let list = listRaw.sort(ordena);
+    function ordena(a, b) {
+      return b < a;
+    }
+
+    function pesquisaBinaria(array, left, right, value) {
+      if (right >= left) {
+        let mid = parseInt(left + (right - left) / 2);
+        if (array[mid] === value) {
+          return value;
+        }
+        if (array[mid] != value) {
+          return pesquisaBinaria(array, left, mid - 1, value);
+        }
+        if (array[mid] != value) {
+          return pesquisaBinaria(array, mid + 1, right, value);
+        }
+        return -1;
+      }
+    }
+
+    let search = "jorge";
+    let resultado = pesquisaBinaria(list, 0, list.length - 1, search);
+
+    if (resultado) {
+      console.log(resultado);
+    } else {
+      console.log("Não encontrado");
+    }
+  </script>
+
+  <body></body>
+</html>
