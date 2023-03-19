@@ -1,6 +1,6 @@
-2. Elaborar um programa que leia oito elementos numéricos  
-inteiros em uma matriz A de uma dimensão do tipo vetor.  
-Construir uma matriz B de mesmos tipo e dimensão com os  
-elementos da matriz A multiplicados por 5. Montar uma  
-rotina de pesquisa binária para pesquisar os elementos  
-armazenados na matriz B
+3. Elaborar um programa que leia duas matrizes A e B de uma  
+dimensão do tipo vetor com dez elementos inteiros cada.  
+Construir uma matriz C de mesmos tipo e dimensão que  
+seja formada pela soma dos quadrados de cada elemento  
+correspondente das matrizes A e B. Apresentar a matriz C  
+em ordem decrescente
